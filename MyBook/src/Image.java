@@ -1,3 +1,5 @@
+
+
 import java.util.concurrent.TimeUnit;
 
 public class Image implements Element {
@@ -14,7 +16,7 @@ public class Image implements Element {
             e.printStackTrace();
         }
     }
-    @Override
+
     public void print() {
         System.out.println("Image with name: "+name);
     }
@@ -30,5 +32,10 @@ public class Image implements Element {
     }
     public Element get(int index){
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitImage(this);
     }
 }
