@@ -7,6 +7,7 @@ public class Section implements Element{
 
 
     private String title;
+
     private List<Element> elements = new ArrayList<>();
     public Section(String title) {
         this.title = title;
